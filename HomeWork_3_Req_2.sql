@@ -1,0 +1,27 @@
+--SELECT t.FirstName, t.LastName, t.ID, COUNT(Grade) as TotalNumberOfGrades
+--FROM Grade g
+--INNER JOIN Teacher t
+--ON g.TeacherID = t.ID
+--GROUP BY t.FirstName, t.LastName, t.ID
+--HAVING COUNT(Grade) > 200
+--ORDER BY t.FirstName, t.LastName
+--GO
+
+--SELECT t.FirstName, t.LastName, t.ID, COUNT(Grade) as TotalNumberOfGrades
+--FROM Grade g
+--INNER JOIN Teacher t
+--ON g.TeacherID = t.ID
+--WHERE g.StudentID < 100
+--GROUP BY t.FirstName, t.LastName, t.ID
+--HAVING COUNT(Grade) > 50
+--ORDER BY t.FirstName, t.LastName
+--GO
+
+--SELECT s.FirstName, s.LastName, s.ID, COUNT(Grade) as NumberOfGrades, max(Grade) as MaximumGrade, avg(Grade) as AverageGrade
+--FROM Grade g
+--INNER JOIN Student s
+--ON g.StudentID = s.ID
+--GROUP BY s.FirstName, s.LastName, s.ID
+--HAVING MAX(Grade) = AVG(Grade)
+--ORDER BY s.FirstName, s.LastName
+--GO
